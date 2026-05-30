@@ -6,7 +6,7 @@ Kotlin, Jetpack Compose
 
 
 
-![App Demo](screenshots/demo.gif)
+![App Demo](screenshot/2.png)
 
 ---
 

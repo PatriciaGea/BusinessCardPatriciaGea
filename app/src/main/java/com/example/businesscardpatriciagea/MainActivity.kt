@@ -86,9 +86,9 @@ fun BusinessCardScreen(modifier: Modifier = Modifier) {
 
         Image(
             painter = painterResource(R.drawable.androidvector),
-            contentDescription = null,
+            contentDescription = "Android",
             contentScale = ContentScale.Fit,
-            modifier = Modifier.width(130.dp)
+            modifier = Modifier.width(110.dp)
         )
 
         Spacer(modifier = Modifier.height(10.dp))
