@@ -76,7 +76,7 @@ fun BusinessCardScreen(modifier: Modifier = Modifier) {
             painter = painterResource(R.drawable.rostoweb),
             contentDescription = null,
             modifier = Modifier
-                .size(260.dp)
+                .size(240.dp)
                 .background(Color.White, CircleShape)
                 .clip(CircleShape)
                 .border(1.dp, Color.Black, CircleShape)
@@ -88,7 +88,7 @@ fun BusinessCardScreen(modifier: Modifier = Modifier) {
             painter = painterResource(R.drawable.androidvector),
             contentDescription = null,
             contentScale = ContentScale.Fit,
-            modifier = Modifier.width(150.dp)
+            modifier = Modifier.width(130.dp)
         )
 
         Spacer(modifier = Modifier.height(10.dp))
@@ -103,7 +103,7 @@ fun ContactCard() {
     Card(
         modifier = Modifier
             .padding(16.dp)
-            .size(width = 310.dp, height = 350.dp),
+            .size(width = 300.dp, height = 310.dp),
         shape = RoundedCornerShape(20.dp),
         border = BorderStroke(1.dp, Color.Black),
         colors = CardDefaults.cardColors(
@@ -114,8 +114,9 @@ fun ContactCard() {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(16.dp),
+                .padding(29.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
+
         ) {
 
             Row(
@@ -129,7 +130,7 @@ fun ContactCard() {
                 Spacer(modifier = Modifier.width(16.dp))
 
                 Button(onClick = { }) {
-                    Text("Call")
+                    Text(" Call ")
                 }
             }
 
@@ -147,7 +148,7 @@ fun ContactCard() {
 
             ContactItem(
                 iconRes = R.drawable.linkedin,
-                text = "linkedin.com/in/patriciageadev",
+                text = "linkedin.com/patriciageadev",
                 url = "https://linkedin.com/in/patriciageadev"
             )
         }
@@ -169,17 +170,20 @@ fun ContactItem(
                     Intent(Intent.ACTION_VIEW, url.toUri())
                 )
             }
-            .padding(8.dp),
+            .padding(4.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Image(
             painter = painterResource(id = iconRes),
             contentDescription = null,
-            modifier = Modifier.size(20.dp)
+            modifier = Modifier.size(30.dp)
         )
 
-        Spacer(modifier = Modifier.width(8.dp))
+        Spacer(modifier = Modifier.width(4.dp))
 
-        Text(text)
+        Text(
+            text = text,
+            style = MaterialTheme.typography.labelSmall
+        )
     }
 }
