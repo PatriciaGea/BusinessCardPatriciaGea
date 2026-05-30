@@ -66,7 +66,21 @@ fun BusinessCardScreen(modifier: Modifier = Modifier) {
             "Mobile / Frontend Developer",
             style = MaterialTheme.typography.bodyMedium
         )
+        Row(
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                painter = painterResource(R.drawable.map_pin),
+                contentDescription = "Location",
+                tint = Color.Black
+            )
 
+            Text(
+            "Stockholm, Sweden",
+            style = MaterialTheme.typography.bodySmall,
+            color = Color.Black
+        )
+        }
         Spacer(modifier = Modifier.height(20.dp))
 
         Image(
@@ -80,7 +94,7 @@ fun BusinessCardScreen(modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(30.dp))
 
-        ContactCard()
+            ContactCard()
     }
 }
 
