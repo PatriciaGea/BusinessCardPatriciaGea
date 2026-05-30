@@ -1,16 +1,11 @@
 package com.example.businesscardpatriciagea
 
 import android.content.Intent
-
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -19,15 +14,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.example.businesscardpatriciagea.ui.theme.BusinessCardPatriciaGeaTheme
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.core.net.toUri
-
+import com.example.businesscardpatriciagea.ui.theme.BusinessCardPatriciaGeaTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,7 +29,8 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             BusinessCardPatriciaGeaTheme {
-                Scaffold(modifier = Modifier.fillMaxSize(),
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
                     containerColor = MaterialTheme.colorScheme.background
                 ) { innerPadding ->
                     BusinessCardScreen(
@@ -52,128 +46,140 @@ class MainActivity : ComponentActivity() {
 fun BusinessCardScreen(modifier: Modifier = Modifier) {
 
     Column(
-        modifier = modifier
-            .fillMaxSize(),
+        modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
         Spacer(modifier = Modifier.height(50.dp))
 
-        Text(
-            "Patricia Gea",
-            style = MaterialTheme.typography.headlineLarge
-        )
+        Text("Patricia Gea", style = MaterialTheme.typography.headlineLarge)
 
-        Text(
-            "Mobile / Frontend Developer",
-            style = MaterialTheme.typography.bodyMedium
-        )
-        Row(
-            verticalAlignment = Alignment.CenterVertically
-        ) {
+        Text("Mobile / Frontend Developer", style = MaterialTheme.typography.bodyMedium)
+
+        Row(verticalAlignment = Alignment.CenterVertically) {
             Icon(
                 painter = painterResource(R.drawable.map_pin),
-                contentDescription = "Location",
+                contentDescription = null,
                 tint = Color.Black
             )
 
             Text(
-            "Stockholm, Sweden",
-            style = MaterialTheme.typography.bodySmall,
-            color = Color.Black
-        )
+                "Stockholm, Sweden",
+                style = MaterialTheme.typography.bodySmall,
+                color = Color.Black
+            )
         }
+
         Spacer(modifier = Modifier.height(20.dp))
 
         Image(
             painter = painterResource(R.drawable.rostoweb),
-            contentDescription = "Minha foto",
+            contentDescription = null,
             modifier = Modifier
                 .size(260.dp)
                 .background(Color.White, CircleShape)
                 .clip(CircleShape)
-                .border(1.dp, Color.Black, CircleShape))
+                .border(1.dp, Color.Black, CircleShape)
+        )
+
         Spacer(modifier = Modifier.height(30.dp))
+
         Image(
             painter = painterResource(R.drawable.androidvector),
-            contentDescription = "Android",
+            contentDescription = null,
             contentScale = ContentScale.Fit,
             modifier = Modifier.width(150.dp)
         )
-        Spacer(modifier = Modifier.height(5.dp))
 
-            ContactCard()
+        Spacer(modifier = Modifier.height(10.dp))
+
+        ContactCard()
     }
 }
-
-//data class LinkItem(
-//    val title: String,
-//    val url: String
-//)
-
 
 @Composable
 fun ContactCard() {
 
-//    val context = LocalContext.current
-//
-//    val links = listOf(
-//        LinkItem("Email", "mailto:patricia.gea@email.com"),
-//        LinkItem("patriciageadev.vercel.app", "https://patriciageadev.vercel.app/"),
-//        LinkItem("GitHub", "https://github.com")
-//    )
-
     Card(
         modifier = Modifier
             .padding(16.dp)
-            .size(
-                width = 260.dp,
-                height = 350.dp
-            ),
+            .size(width = 310.dp, height = 350.dp),
         shape = RoundedCornerShape(20.dp),
-        border = BorderStroke(
-            1.dp,
-            Color.Black
-        ),
+        border = BorderStroke(1.dp, Color.Black),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surface
         )
-    )
-    {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Button(onClick = { }) {
-                Text("Email")
-            }
+    ) {
 
-            Spacer(modifier = Modifier.width(16.dp)) // 👈 AQUI O ESPAÇO
-
-            Button(onClick = { }) {
-                Text("Call")
-            }
-        }
         Column(
             modifier = Modifier
                 .fillMaxSize()
-
+                .padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
 
-//            links.forEach { item ->
-//                Text(
-//                    text = item.title,
-//                    modifier = Modifier.clickable {
-//                        val intent = Intent(Intent.ACTION_VIEW, item.url.toUri())
-//                        context.startActivity(intent)
-//                    },
-//                    style = MaterialTheme.typography.bodyLarge
-//                )
-//            }
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Button(onClick = { }) {
+                    Text("Email")
+                }
+
+                Spacer(modifier = Modifier.width(16.dp))
+
+                Button(onClick = { }) {
+                    Text("Call")
+                }
+            }
+
+            ContactItem(
+                iconRes = R.drawable.house,
+                text = "patriciageadev.vercel.app",
+                url = "https://patriciageadev.vercel.app"
+            )
+
+            ContactItem(
+                iconRes = R.drawable.vectorgit,
+                text = "github.com/PatriciaGea",
+                url = "https://github.com/PatriciaGea"
+            )
+
+            ContactItem(
+                iconRes = R.drawable.linkedin,
+                text = "linkedin.com/in/patriciageadev",
+                url = "https://linkedin.com/in/patriciageadev"
+            )
         }
     }
 }
 
+@Composable
+fun ContactItem(
+    iconRes: Int,
+    text: String,
+    url: String
+) {
+    val context = LocalContext.current
+
+    Row(
+        modifier = Modifier
+            .clickable {
+                context.startActivity(
+                    Intent(Intent.ACTION_VIEW, url.toUri())
+                )
+            }
+            .padding(8.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Image(
+            painter = painterResource(id = iconRes),
+            contentDescription = null,
+            modifier = Modifier.size(20.dp)
+        )
+
+        Spacer(modifier = Modifier.width(8.dp))
+
+        Text(text)
+    }
+}
