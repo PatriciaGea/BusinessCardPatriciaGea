@@ -2,10 +2,12 @@ package com.example.businesscardpatriciagea.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFBBDEBD)
-val Pink80 = Color(0xFFEFB8C8)
+val BrandPrimary = Color(0xFF7FB799)
 
-val Purple40 = Color(0xFF345636)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+val ScreenBackground = Color(0xFF7FB799)
+
+val CardBackground = Color(0xFFFFFFFF)
+
+val TextPrimary = Color(0xFF1B1B1B)
+
+val BorderColor = Color(0xFF090909)
