@@ -1,45 +1,71 @@
-# <img src="images/rosto.png" width="200"/> Business Card App
+# ✦  Business Card App ( Done by Patricia Gea)
+Android Studio, 
+Kotlin, Jetpack Compose
 
-Android application built with **Kotlin** and **Jetpack Compose**, created as part of my learning journey in Android development.
+## ✦  App Screenshots
+
+
+
+![App Demo](screenshots/demo.gif)
 
 ---
 
-## 🎯 Project Goal
+## ✦  Project Purpose
 
-To build a digital business card app with a modern UI using Jetpack Compose components, practicing basic Android UI structure and layout design.
+This project was built to practice core Jetpack Compose concepts, focusing on modern UI development, reusable components, and simple navigation using Android Intents.
 
 ---
 
-## 🛠️ Technologies Used
+## ✦  Technologies Used
 
 - Kotlin
-- Android Studio
 - Jetpack Compose
 - Material 3
-- Gradle
+- Android Studio
+- Intents (ACTION_VIEW, ACTION_DIAL)
 
 ---
 
-## 📚 Concepts Practiced
+## ✦  Concepts Practiced
 
-- Composables
-- Column, Row, and Box layouts
-- Modifier (padding, size, fillMaxSize)
-- Scaffold
-- Jetpack Compose Theme system
-- UI Preview
-- Basic Android UI structure
-- Image handling in Android (Drawable resources)
+- Reusable composable functions
+- Layouts using Column and Row
+- Modifiers (padding, size, clickable)
+- UI componentization
+- External navigation with Intents
+- Material 3 design system
+- Proper UI spacing and alignment
 
 ---
 
-## 📱 Screenshots
+## ▶️ How to Run the Project
 
-soon
----
+1. Clone this repository:
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+```
+## 📎 My Links
 
-🌐 Connect with me
+ **Website**  
+https://patriciageadev.vercel.app  
 
-- 💼 LinkedIn: https://www.linkedin.com/in/patriciageadev/
-- 💻 GitHub: https://github.com/PatriciaGea
-- 📧 Email: patricia.gea@gmail.com
+ **GitHub**  
+https://github.com/PatriciaGea  
+
+ **LinkedIn**  
+https://linkedin.com/in/patriciageadev  
+⠀⠀⠀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⣀⡀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠙⢷⣤⣤⣴⣶⣶⣦⣤⣤⡾⠋⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣼⣿⣿⣉⣹⣿⣿⣿⣿⣏⣉⣿⣿⣧⠀⠀⠀⠀
+⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀
+⣠⣄⠀⢠⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⡄⠀⣠⣄
+⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿
+⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿
+⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿
+⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿
+⠻⠟⠁⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠈⠻⠟
+⠀⠀⠀⠀⠉⠉⣿⣿⣿⡏⠉⠉⢹⣿⣿⣿⠉⠉⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣿⣿⣿⡇⠀⠀⢸⣿⣿⣿⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣿⣿⣿⡇⠀⠀⢸⣿⣿⣿⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⠉⠉⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀
