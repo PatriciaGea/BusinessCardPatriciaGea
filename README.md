@@ -6,7 +6,7 @@ Kotlin, Jetpack Compose
 
 
 
-![App Demo](screenshot/2.png)
+ <img src="https://raw.githubusercontent.com/PatriciaGea/BusinessCardPatriciaGea/master/screenshot/Screenshot.png" width="300"/>
 
 ---
 
@@ -54,6 +54,8 @@ https://github.com/PatriciaGea
 
  **LinkedIn**  
 https://linkedin.com/in/patriciageadev  
+
+```bash
 ⠀⠀⠀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⣀⡀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠙⢷⣤⣤⣴⣶⣶⣦⣤⣤⡾⠋⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀⠀⠀⠀
